@@ -1,0 +1,242 @@
+/* Esto es un comentario */
+/* Por la especificidad se deben utilizar los IDs y Clases/Pseudoclases. Los del tipo !important deben ser limitados y excepcionales */
+
+/* ---------------------------------- Componentes para todas las páginas del TPO ----------------------------------*/
+/* -------------------------------------------- Componentes del Header --------------------------------------------*/ 
+.header_nav_div_container {
+        display:flex;
+        position: fixed; 
+        z-index: 100;
+        background-image: linear-gradient( to top, #cccccc, #d4d4d4, #dddddd, #e5e5e5, #eeeeee);
+        width: 100vw;
+        height: 100px;
+}
+.header_nav_div1 {
+        width: 60px;
+        height: 60px;
+        margin: 20px;
+}
+.header_nav_div1_img {
+        width: 60px;
+        height: auto;
+}
+.header_nav_div2 {
+        height: 80px;
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left:0;
+        margin: auto;
+}
+.header_nav_div2_a {
+        display: inline-block;
+        color: #999999;
+        padding: 10px;
+        margin: 15px 15px;
+} 
+.header_nav_div2_a:active, .header_nav_div2_a:visited, .header_nav_div2_a:link {
+        font-family: sans-serif;
+        padding: 7px;
+        color: #999999;
+        text-decoration: none;
+}
+.header_nav_div2_a {
+        transition: all .05s;
+}
+.header_nav_div2_a:hover {
+        background-color: #ffffff;
+        color: #2b78c2;
+        border-radius: 10px;
+}
+.fa-home, .fa-user, .fa-at, .fa-user-plus, .fa-map-marker-alt, .fa-users {
+        color: #999999; /* Iconos del nav */
+}
+
+/* -------------------------------------------- Componentes del Footer --------------------------------------------*/ 
+.footer_div {
+        color: #999999;
+        background: linear-gradient(to right, #e6e6e6, #e6e6e6, #ffffff, #ffffff, #ffffff, #e6e6e6, #e6e6e6 );
+        margin-top: 1em;
+        width: 100%;
+        text-align: center;
+}
+.footer h4 {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1em;
+}
+.linkfooter {
+        display: inline-block;
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+        text-decoration: none;
+}
+/* -------------------------------------------- Redes Sociales --------------------------------------------*/ 
+.fa-facebook-square{
+        color: #475a95;
+        background-image: linear-gradient(to right, #e6e6e6, white, white, white, white, white, #e6e6e6);
+        border-radius: 15%;
+        line-height: 0.87em;
+}
+.fa-twitter-square {
+        color: #00acee;
+        background-image: linear-gradient(to right, #e6e6e6, white, white, white, white, white, #e6e6e6);
+        line-height: 0.87em;
+        border-radius: 15%;
+}
+.fa-instagram {
+        background: #d6249f;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+.fa-pinterest-square {
+        color: red;
+        background-image: linear-gradient(to right, #e6e6e6, white, white, white, white, white, #e6e6e6);
+        line-height: 0.87em;
+        border-radius: 15%;
+}
+.fa-linkedin {
+        color: blue;
+        background-image: linear-gradient(to right, #e6e6e6, white, white, white, white, white, #e6e6e6);
+        line-height: 0.87em;
+        border-radius: 15%;
+}
+.fa-youtube {
+        color: red;
+        background-image: linear-gradient(to right, #e6e6e6, #e6e6e6, white, white, white, #e6e6e6, #e6e6e6);
+        line-height: 0.3em !important;        
+}
+
+/* ----------------------------------- Componentes para cada una las páginas del TPO ------------------------------------*/
+/* ----------------------------------------------- Componentes del Main -------------------------------------------------*/
+/* ------------------------------------------ Comunes a todas las páginas -----------------------------------------------*/
+
+.index_main, .oficinas_main, .nuestras_marcas_main, .contacto_mail, .registrarse_main {
+        padding-top: 100px;
+}
+
+
+/* ----------------------------------------------------- index.html -----------------------------------------------------*/
+
+.index_main_div_conteiner1 {
+        background-color: #7897ab;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        margin: 0;
+        /* border: 15px solid yellow; /* Borrar al final */
+}
+.index_main_div_conteiner1_div3 {
+        background-color: #ffffff;
+        color: black;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: .5em 0;
+        width: 100vw;
+}
+.index_main_div_conteiner2 {
+        width: 100vw;
+        height: 768px;
+        display: flex;
+        color: #ffffff;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+}
+.index_main_div_conteiner2_img {
+        width: 100vw;
+        height: 768px;
+        position: absolute;
+        z-index: 20;
+}
+.index_main_div_conteiner2 h2 {
+        color: #ffffff;
+        text-align: center;
+        width: 600px;
+        position: absolute;
+        z-index: 30;
+        top: 150px;
+        left: 0;
+        right: 0;
+        margin: auto;
+}
+.index_main_div_conteiner2 h5 {
+        color: #ffffff;
+        text-align: center;
+        width: 600px;
+        position: absolute;
+        z-index: 40;
+        top: 200px;
+        left: 0;
+        right: 0;
+        margin: auto;
+}
+
+/* Definición del grid */
+#index_form1 {
+        display: grid;
+        grid-template-rows: repeat(4, 2em) 3em; /* grid-template-rows: 120px 120px 120px; */
+        grid-template-columns: repeat(9, 70px) 1fr; /* grid-template-columns: 90px 90px 90px 90px 90px 90px; */
+        grid-row-gap: 0.5em;
+        grid-column-gap: 10px;
+        width: 800px;
+        height: 15em;
+        position: absolute;
+        z-index: 50;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left:0;
+        margin: auto;
+        background-color: #ffffffaa;
+        border: 3px solid blue;
+        align-content: center;
+        
+}
+/* Definición de ancho y alto de los items en filas y columnas */
+.index_form1_input_label1, .index_form1_input_label2, .index_form1_input_label3 {
+        background-color: #ffffff00;
+        color: #ff1111;
+        font-weight: bold;
+        border: 2px solid black;
+        font-size: 0.8em;
+}
+#index_form1_select1, #index_form1_select2 {
+        grid-column: 1/9; /* grid-column: 1/ span 8. Arranca en 1 y abarca 8 columnas */
+        border: 2px solid black;
+}
+#index_form1_input_fecha_retiro, #index_form1_input_fecha_devolucion {
+        grid-column: 9/11; /* grid-column: 9/ span 2. Arranca en 9 y abarca 2 columnas */
+        border: 2px solid black;
+}
+#index_form1_input_cupon, .index_form1_input_label1 {
+        grid-column: 1/4; /* grid-column: 1/ span 3. Arranca en 1 y abarca 3 columnas */
+        border: 2px solid black;
+}
+#index_form1_input_codigo_AWD, .index_form1_input_label2 {
+        grid-column: 4/7; /* grid-column: 4/ span 3. Arranca en 4 y abarca 3 columnas */
+        border: 2px solid black;
+}
+#index_form1_input_nro_vuelo, .index_form1_input_label3 {
+        grid-column: 7/11; /* grid-column: 7/ span 2. Arranca en 7 y abarca 4 columnas */
+        border: 2px solid black;
+}
+.index_form1_button {
+        grid-column: 4 / span 4; /* grid-column: 5/ span 4. Arranca en 5 y abarca 4 columnas */
+        background-color: #7897ab;
+        color: #ffffff;
+        font-size: 18px;
+}
+.index_form1_input_label1, .index_form1_input_label2, .index_form1_input_label3 {
+        
+}
+
+/* ---------------------------------------------------- nuestras_marcas.html ---------------------------------------------------*/
+
+
+
+
+
+/* Componentes del Main */
+
+
