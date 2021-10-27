@@ -302,6 +302,17 @@
         align-content: center;
         
 }
+
+#index_form1_select1, #index_form1_select2, #index_form1_input_cupon, .index_form1_input_label1 {
+        margin-left: 10px;
+}
+
+#index_form1_input_fecha_retiro, #index_form1_input_fecha_devolucion, #index_form1_input_nro_vuelo {
+        margin-right: 10px;
+}
+
+
+
 /* Definición de ancho y alto de los items en filas y columnas */
 .index_form1_input_label1, .index_form1_input_label2, .index_form1_input_label3 {
         background-color: #ffffff00;
