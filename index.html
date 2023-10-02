@@ -1,190 +1,224 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <head>
+    <link rel="stylesheet" href="/TP Front-end/css/style.css">
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!-- Hoja de estilos CSS3 -->
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        /* Set the border color */
+         
+        .custom-toggler.navbar-toggler {
+            border-color: white;
+        }
+        /* Setting the stroke to green using rgb values (0, 128, 0) */
+         
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+    </style>
 
-    <!-- Links a fonts/iconos externos -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Google Icons -->
-    <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com"> <!-- Google Fonts-->
-    <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com" crossorigin> <!-- Google Fonts-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> <!-- Bootstrap Icons -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- Bootstrap 5-->
-    <script src="https://kit.fontawesome.com/ca4b713567.js" crossorigin="anonymous"></script> <!-- Awesome Fonts-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> <!-- Bootstrap 5-->
+    <title>CAC Com.23544 - TP Ingrado Front-End</title>
+</head>
 
-    <!-- Links a animaciones externas -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<body class="">
 
-    <!-- Fuentes específicas de Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> <!-- Lobster CSS: font-family: 'Lobster', cursive; -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> <!-- Roboto CSS: font-family: 'Roboto', sans-serif; -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet"> <!-- Oswald CSS: font-family: 'Oswald', sans-serif; -->
+    <header>
+        <nav class="navbar navbar-expand-md color-nav justify-content-md-center align-items-center">
+            <div class="container-fluid">
+                <div class="col col-md-4 ms-5 display-nav">
+                    <span class="text-white"><img src="/TP Front-end/img/codoacodo.png" alt="logo" width="75px" height="50px">Conf Bs As</span>           
+                </div>
+                    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse col col-md-7" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-center" href="#">La conferencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary text-center" href="#">Los oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary text-center" href="#">El lugar y la fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary text-center" href="#">Conviértete en orador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-success text-center" href="#">Comprar tickets</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  </head>
+    <main class="">
+        <section class="">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner container-carousel">
+                    <div class="container-text">
+                        <h1>Conf Bs As</h1>
+                        <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el 
+                            conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a 
+                            conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer 
+                            nivel que tenemos para ti. Te esperamos!</p>
+                        <button type="button" class="btn btn-outline-light me-2">Quiero ser orador</button>
+                        <button type="button" class="btn btn-success btn-main">Comprar tickets</button> <!-- Color botón #29a744 -->
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="/TP Front-end/img/ba1.jpg" class="d-block w-100 img-main" alt="BA1">
+                    </div>
+                    <!--<div class="carousel-item">
+                        <img src="/TP Front-end/img/ba2.jpg" class="d-block w-100" alt="BA2" position="absolute">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/TP Front-end/img/ba3.jpg" class="d-block w-100" alt="BA3" position="absolute">
+                    </div>-->
+                </div>
+            </div>
+        </section>
 
-    <body>
-
-    <!-- Pautas del TPO -->
-
-    <!-- TPO Front Integrador HTML, CSS y Javascript
-
-    ¿Cuándo se entrega? Fecha límite de entrega: semana del 25/10 al 29/10.
-    
-    ¿Qué hay que entregar?
-    El TPO deberá cumplir con los siguientes requisitos:
-    ●   Poseer al menos 3 páginas html, siendo su temática libre. (OK. Tiene 5. index.html, oficinas.html, nuestras_marcas.html, contacto.html y registro.html)
-    ●   Utilizar etiquetas semánticas para estructurar el sitio de forma correcta. (OK. Estructura Head, Header con Nav, Main y Footer)
-    ●   Contener un formulario de contacto con validación realizada mediante Javascript. (Ok. Tiene 2 formularios. Uno de contacto y otro de registro. El de contacto está hecho en boostrap y el de registro es el que tiene la validación en JS)
-    ●   Utilizar iframes, íconos de FontAwesome, y fuentes locales o bien de Google Fonts. (OK. Se utilizaron iconos de FontsAwesome en el Nav, fuentes de google y locales. Los inframes en oficinas.html)
-    ●   Tener una página totalmente responsive con 3 puntos de corte para 3 tamaños de dispositivos (La página registro.html es totalmente responsive con sus respectivos puntos de corte. Las media queries en el archivo registro.css)
-    ●   Utilizar al menos una animación, transformación o una transición (indicar dónde fue incorporada la animación). (OK. Se utilizó :hover en el Nav y animaciones en títulos del index.html)
-    ●   Poseer una estructura HTML maquetada con Flexbox y/o Grid. (Ok. Se utilizó flex y/o grid en todas las páginas)
-    ●   Sólo podrá utilizar Bootstrap en la página del formulario del sitio web. (Ok. Se utilizó boostrap en la página contacto.html)
-    ●   La página deberá subirse a un servidor on-line para poder ser navegada por el Docente. Ejemplo: Netlify o similar. (Ok. Subida a https://tpofrontendcac40.netlify.app/ o https://eldiego77cp.github.io/)
-    ●   Además de los aspectos técnicos ya mencionados, el proyecto deberá contemplar aspectos de diseño los cuales serán evaluados por el Docente. 
-        Para eso se recomienda que vean el material disponible en el Aula Virtual. Seminario de Diseño Web: https://youtu.be/fVkGt2tYIj0. Para más  información, ver material incluído en el Aula 
-        Virtual Metodologías y herramientas I/Diseño.
-    ●   Nota: el TPO es individual pero en caso querer resolver el proyecto de forma grupal, deberán 
-        sincronizar el código del TPO en Github (o similar) enviando el link del repositorio al Docente. 
-        Este requisito obligatorio sólo aplica para los proyectos que se desarrollen de a 2 personas 
-        (cantidad máxima de integrantes posible). Para más información sobre Git, ver material incluído en 
-        el Aula Virtual Metodologías y herramientas I/Git.
-
-    Condiciones de aprobación: para aprobar se requiere resolver el trabajo práctico en un 60% de forma correcta.
-
-    ¿Cómo se entrega?
-    Cada Docente informará la vía para subir el trabajo. Al momento de la entrega deberán informar: 
-    link a la web navegable y comentarios que consideren necesarios agregar a la entrega.
-    Nota: si ya tenés un proyecto comenzado para este curso, podrás usarlo para esta entrega 
-    agregándole lo que falte para cumplir con los requisitos.
-     -->
-
-     <div class="index_gc"> <!-- Empieza el container -->
-
-      <div class="gi_header_logo" id="top"> <!-- header_logo --> 
-            <img class="flex_item_nav_logo" src="logo/car_parking.png" alt="logo">
-      </div>
-      
-      <div class="gi_header_nav"> <!-- header_nav -->
-            <a href="#top" ><i class="fas fa-home"></i> Home</a>
-            <a href="pages/oficinas.html" ><i class="fas fa-map-marker-alt"></i> Oficinas</a>
-            <a href="pages/nuestras_marcas.html" ><i class="fas fa-users"></i> Nuestras Marcas</a>
-            <a href="pages/contacto.html" ><i class="fas fa-at"></i> Contacto</a>
-            <a href="pages/registro.html" ><i class="fas fa-user-plus"></i> Registro / Login</a>
-      </div>
-
-      <div class="index_gi_aside1"></div> <!-- aside1 -->
-
-      <div class="index_gi_main"> <!-- main -->
-
-        <h1 class="animate__animated animate__flip">POINTER RENT A CAR</h1>
-
-        <h2>EN AUTO, ES MEJOR.</h2>
-        <h3>Libertad para tus viajes de placer o negocios.</h3>
-
-        <h4>Conocé las mejores alternativas que Pointer tiene para vos.</h4>
-
-      </div>
-
-      <div class="index_gi_aside2"></div> <!-- aside2 -->
-
-      <div class="index_gi_image">
-
-        <h2>Alquilá tu auto con "Protección Platinum"</h2>
-        <h5>PARA UN VIAJE CON MÁXIMA COBERTURA</h5>
-        <img src="images/road-lights.jpg" alt="road-lights">
-
-        <form id="index_form1" method="GET" target="_blank"> <!-- Container Form-->
-          
-          <select name="oficina" id="index_form1_select1"> <!-- Grid Item -->
-            <option value=""> Seleccione una oficina de alquiler</option>
-            <option value="1" ><i class="fas fa-map-marker-alt"></i> [HOM] Casa Central, Capital Federal</option>
-            <option value="2" ><i class="fas fa-plane"></i> [AEP] Buenos Aires - Aeroparque Jorge Newbery, Capital Federal</option>
-            <option value="3" ><i class="fas fa-plane"></i> [EZE] Buenos Aires - Aeropuerto Ezeiza, Buenos Aires</option>
-            <option value="4" ><i class="fas fa-plane"></i> [BHB] Bahía Blanca - Aeropuerto Comte. Espora, Buenos Aires</option>
-            <option value="5" ><i class="fas fa-plane"></i> [MDZ] Mendoza - Aeropuerto El Plumerillo, Mendoza</option>
-            <option value="6" ><i class="fas fa-plane"></i> [BRC] Bariloche - Aeropuerto Tte. Luis Candelaria, Río Negro</option>
-          </select>
-
-          <input type="date" name="fecha_retiro" id="index_form1_input_fecha_retiro" size="30" required> <!-- Grid Item -->
-
-          <select name="oficina" id="index_form1_select2"> <!-- Grid Item -->
-            <option value=""> Seleccione una oficina de devolución</option>
-            <option value="1" ><i class="fas fa-map-marker-alt"></i> [HOM] Oficinas Centrales, Capital Federal</option>
-            <option value="2" ><i class="fas fa-plane"></i> [AEP] Buenos Aires - Aeroparque Jorge Newbery, Capital Federal</option>
-            <option value="3" ><i class="fas fa-plane"></i> [EZE] Buenos Aires - Aeropuerto Ezeiza, Buenos Aires</option>
-            <option value="4" ><i class="fas fa-plane"></i> [BHB] Bahía Blanca - Aeropuerto Comte. Espora, Buenos Aires</option>
-            <option value="5" ><i class="fas fa-plane"></i> [MDZ] Mendoza - Aeropuerto El Plumerillo, Mendoza</option>
-            <option value="6" ><i class="fas fa-plane"></i> [BRC] Bariloche - Aeropuerto Tte. Luis Candelaria, Río Negro</option>
-          </select>
-
-          <input type="date" name="fecha_retiro" id="index_form1_input_fecha_devolucion" size="30" required> <!-- Grid Item -->
-          <input type="text" name="cupon" id="index_form1_input_cupon" size="30" maxlength="100" placeholder="Cupón promocional"> <!-- Grid Item -->
-          <input type="text" name="codigo_AWD" id="index_form1_input_codigo_AWD" size="30" maxlength="100" placeholder="Código AWD"> <!-- Grid Item -->
-          <input type="text" name="nro_vuelo" id="index_form1_input_nro_vuelo" size="30" maxlength="100" placeholder="Nro. Vuelo: Ej: AR1274"> <!-- Grid Item -->
-          <label class="index_form1_input_label1" for="index_form1_input_cupon">Opcional</label>
-          <label class="index_form1_input_label2" for="index_form1_input_codigo_AWD">Opcional</label>
-          <label class="index_form1_input_label3" for="index_form1_input_nro_vuelo">Obligatorio Oficinas APT</label>
-          <button class="index_form1_button">Buscar mi auto</button>
-          
-        </form>
-
-      </div>
-
-      <div class="index_gi_image2">
-            <img src="images/AV-1305X460_PREVIAJE.jpg" alt="Previaje">
-            <p>COMPRÁ HOY Y DISFRUTÁ ARGENTINA EN 2021 Y 2022</p>
-            <button type="submit" class="btn-colcss">Más Información</button>
-      </div>
+        <section class="oradores container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-3 mt-3 text-center">
+                    <h5>CONOCE A LOS</h5>
+                    <h1>ORADORES</h1>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="/TP Front-end/img/steve.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark">JavaScript</span>
+                            <span class="badge bg-info text-light">React</span>
+                            <h5 class="card-title">Steve Jobs</h5>
+                            <p class="card-text fs-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum officiis animi error tenetur consequatur vitae enim, qui molestias impedit numquam nihil labore itaque accusamus, recusandae quam, magnam libero cupiditate quibusdam?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="/TP Front-end/img/bill.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark">JavaScript</span>
+                            <span class="badge bg-info text-light">React</span>
+                            <h5 class="card-title">Bill Gates</h5>
+                            <p class="card-text fs-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum officiis animi error tenetur consequatur vitae enim, qui molestias impedit numquam nihil labore itaque accusamus, recusandae quam, magnam libero cupiditate quibusdam?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="/TP Front-end/img/ada.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <span class="badge bg-secondary text-light">Negocios</span>
+                            <span class="badge bg-danger text-light">Startups</span>
+                            <h5 class="card-title">Ada Lovelace</h5>
+                            <p class="card-text fs-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum officiis animi error tenetur consequatur vitae enim, qui molestias impedit numquam nihil labore itaque accusamus, recusandae quam, magnam libero cupiditate quibusdam?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-      <div class="index_gi_image3">
-            <img src="images/home_AHORA12_1305x460.jpg" alt="Ahora_12">
-            <p>6 Y 12 CUOTAS SIN INTERÉS EN TODOS LOS DESTINOS</p>
-            <button type="submit" class="btn-colcss">Más Información</button>
-      </div>
+        <section class="container-fluid mx-0 px-0 Bsas">
+            <div class="row justify-content-md-center g-1">
+                <div class="col-md-6">
+                    <img src="/TP Front-end/img/honolulu.jpg" class="d-block w-100" alt="BA1" position="absolute">
+                </div>
+                <div class="col-md-6 text-white bg-bsas px-3"> <!-- color: #353a40-->
+                    <h1>Bs As - Octubre</h1>
+                    <p class="fs-bsas-text">Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la
+                        más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área
+                        urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado 
+                        consolidada que cubre toda la ciudad (aproximadamente 600 km de superficie).</p>
+                    <button type="button" class="btn btn-outline-light mb-3">Conocé más</button>
+                </div>
+            </div>
+        </section>
+        
+        <form class="form container-fluid mx-0 px-0 mt-3">
+            <div class="row justify-content-md-center">
+                <div class="col-md-6 text-center">
+                    <p class="fs-form my-0">CONVIÉRTETE EN UN</p>
+                    <h1 class="">ORADOR</h1>
+                    <p class="fs-form">Anótate como orador para dar una charla ignite. Cuéntanos de queé quieres hablar!</p>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-3 text-center">
+                    <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+                </div>
+                <div class="col-md-3 text-center">
+                    <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-6 mt-3">
+                    <textarea class="form-control fs-5 ps-4" placeholder="Sobre qué quieres hablar?" id="floatingTextarea" rows="4"></textarea>
+                    <label for="ffloatingTextarea" class="form-label fs-form-label">Recuerda incluir un título para tu charla</label>
+                </div>
+            </div>
+            <div class="row justify-content-md-center"></div>
+                <div class="d-grid gap-2 col-md-6 mx-auto">
+                    <button class="btn btn-success btn-form fs-5" type="button">Enviar</button> <!-- Color boton #96c93e -->
+                </div>
+            </div>
 
-      <div class="index_gi_image4">
-            <img src="images/bannerPOL_1305X640.jpg" alt="Pago_Online">
-            <p>20% OFF pagando en 1 CUOTA</p>
-            <button type="submit" class="btn-colcss">Más Información</button>
-      </div>
 
-    <div class="gi_footer">
-
-      <a href="http://www.facebook.com" title="Facebook" target="_blank">
-        <i class="fab fa-facebook-square fa-2x"></i>
-      </a>
-      <a href="http://www.twitter.com" title="Twitter" target="_blank">
-        <i class="fab fa-twitter-square fa-2x"></i>
-      </a>
-      <a href="http://www.instagram.com" title="Instagram" target="_blank">
-        <i class="fab fa-instagram fa-2x"></i>
-      </a>
-      <a href="http://www.pinterest.com" title="Pinterest" target="_blank">
-        <i class="fab fa-pinterest-square fa-2x"></i>
-      </a>
-      <a href="http://www.linkedin.com" title="LinkedIn" target="_blank">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      <a href="http://www.youtube.com" title="Youtube" target="_blank">
-        <i class="fab fa-youtube fa-2x"></i> 
-      </a>
-
-      <h4>Derechos Reservados @2021 - Pointer Rent a Car</h4>
-
-    </div>
-
-  </div>
+        </form> <!-- cambiar por un form-->
+    </main>
     
-  </body>
+    <footer> <!-- color #1c3643 a #1e5372 gradiante-->
+            <div class="container-fluid color-footer mx-0 px-0 mt-3">
+                <ul class="nav row align-items-center fs-nav py-3">
+                    <div class="col-lg-1"></div>
+                    <li class="nav-item col">
+                        <a class="nav-link text-white text-center" href="#">Preguntas frecuentes</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link text-white text-center" href="#">Contáctanos</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link text-white text-center" href="#">Prensa</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link text-white text-center" href="#">Conferencias</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link text-white text-center" href="#">Términos y condiciones</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link text-white text-center" href="#">Privacidad</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link text-white text-center" href="#">Estudiantes</a>
+                    </li>
+                    <div class="col-lg-1"></div>
+                </ul>
+            </div>    
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+</body>
 
 </html>
