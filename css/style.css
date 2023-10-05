@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.color-nav {
+    background-color: #353a40 !important;
+}
+
+.fs-nav {
+    font-size: 1rem !important;
+}
+
+.display-nav{
+    display: none !important;
+}
+
+.img-main {
+    /* clip: rect(130px 0px 55px 10px round 0px) !important; */
+    height: 100%;
+    filter: brightness(55%) !important;
+    object-fit: cover !important;
+
+}
+
+.btn-main {
+    background-color: #29a744 !important;
+    color: white !important;
+    border-radius: 5px !important;
+
+}
+
+.container-carousel {
+    position: relative !important;
+    width: 100vw !important;
+}
+
+.container-text{
+    display: none !important ;
+}
+
+.bg-bsas {
+    background-color: #353a40 !important;
+}
+
+.fs-bsas-text {
+    font-size: 0.75rem !important;
+}
+
+.fs-card{
+    font-size: 0.7rem !important;
+}
+
+.fs-form-p {
+    font-size: 0.85rem !important;
+}
+
+.fs-form-label {
+    font-size: 0.8rem !important;
+}
+
+.btn-form {
+    background-color: #96c93e !important;
+    color: white !important;
+    border-radius: 5px !important;
+}
+
+.color-footer {
+    background-image: linear-gradient(to right, #1c3643 0%, #1e5372 100%) !important;
+}
+
+/* Medias */
+
+@media screen and (min-width: 576px){
+
+    .display-nav{
+        display: block !important;
+    }
+
+    .container-text{
+        display: block !important;
+        position: absolute !important;
+        padding: 10px !important;
+        z-index: 1 !important;
+        color: white !important;
+        text-align: center !important;
+        font-size: 0.8rem !important;
+    }
+
+}
+
+@media screen and (min-width: 768px){
+
+    .container-text{
+        display: block !important;
+        position: absolute !important;
+        top: 15% !important;
+        left: 50% !important;
+        padding-right: 5% !important;
+        z-index: 1 !important;
+        color: white !important;
+        text-align: right !important;
+        font-size: 0.8rem !important;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+
+    .container-text{
+        display: block !important;
+        position: absolute !important;
+        top: 33% !important;
+        left: 50% !important;
+        padding-right: 8% !important;
+        z-index: 1 !important;
+        color: white !important;
+        text-align: right !important;
+        font-size: 1.1rem !important;
+    }
+
+}
+
+
