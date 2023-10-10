@@ -20,7 +20,7 @@ body{
 .img-main {
     /* clip: rect(130px 0px 55px 10px round 0px) !important; */
     height: 100%;
-    filter: brightness(35%) !important;
+    filter: brightness(55%) !important;
     object-fit: cover !important;
 
 }
