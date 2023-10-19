@@ -124,3 +124,39 @@ body{
 }
 
 
+/* CSS para ticketx.html*/
+
+.tickets-fs-card{
+    font-size: 0.85rem !important;
+}
+
+.tickets-bd-card1 {
+    border-color: #0d81fd !important;
+    border: solid 1px #0d81fd !important;
+    border-radius: 0px !important;
+}
+
+.tickets-bd-card2 {
+    border-color: #23a6ba !important;
+    border-radius: 0px !important;
+}
+
+.tickets-bd-card3 {
+    border-color: #fdc314 !important;
+    border-radius: 0px !important;
+}
+
+.tickets-total {
+    background-color: #cce5ff !important;
+    color: #164d97 !important;
+    border-radius: 5px !important;
+    padding-left: 25px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    margin-top: 30px !important;
+}
+
+.tickets-btn {
+    min-width: 49% !important;
+    margin-left: 3px;
+}
