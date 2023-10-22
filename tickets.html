@@ -6,6 +6,10 @@
 
     <link rel="stylesheet" href="/css/style.css">
 
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -91,7 +95,7 @@
             </div>
         </section>
         
-        <form class="form container-fluid mt-3">
+        <form id="tickets-form" class="form container-fluid mt-3">
             <div class="row justify-content-md-center">
                 <div class="col-md-6 text-center">
                     <p class="fs-form my-0">VENTA</p>
@@ -100,41 +104,70 @@
             </div>
             <div class="row justify-content-md-center g-0">
                 <div class="btn-group col-md-6 text-center">
-                    <input type="text" class="form-control me-2" placeholder="Nombre" aria-label="First name">
-                    <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                    <input id="nombre" type="text" class="form-control me-2" placeholder="Nombre" aria-label="First name">
+                    <input id="apellido" type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
                 </div>
             </div>
             <div class="row justify-content-md-center g-0 mt-3">
                 <div class="col-md-6 text-center">
-                    <input type="text" class="form-control" placeholder="Correo" aria-label="Mail">
+                    <input id="correo" type="text" class="form-control" placeholder="Correo" aria-label="Mail">
                 </div>
             </div>
             <div class="row justify-content-md-center g-0 mt-1">
                 <div class="col-md-3 pe-2">
                     <label class="">Cantidad</label>
-                    <input type="text" class="form-control me-2 mt-1" placeholder="cantidad" aria-label="cantidad">
+                    <input id="cantidad" type="text" class="form-control me-2 mt-1" placeholder="cantidad" aria-label="cantidad">
                 </div>
                 <div class="col-md-3">
                     <label class="">Categoría</label>
-                    <select class="form-select mt-1" name="" id="">
-                        <option classvalue="1">Estudiante</option>
-                        <option value="2">Trainee</option>
-                        <option value="3">Junior</option>
+                    <select id="seleccion" class="form-select mt-1" name="" id="">
+                        <option id="opcion1" value="1">Estudiante</option>
+                        <option id="opcion2" value="2">Trainee</option>
+                        <option id="opcion3" value="3">Junior</option>
                     </select>
                 </div>
             </div>
             <div class="row justify-content-md-center g-0"> <!-- Bg Color #cce5ff, Ft Color #164d97 -->
                 <div class="col-md-6 tickets-total">
-                    <label>Total a Pagar: $</label>
+                    <label id="total">Total a Pagar: $</label>
                 </div>
             </div>
             <div class="row justify-content-md-center g-0 m-0 p-0 mt-3">
                 <div class="btn-group col-md-6 t-3">
-                    <button id="btn-borrar" class="btn btn-form col-md-3 me-2" type="button">Borrar</button> <!-- Color boton #96c93e -->
-                    <button id="btn-resumen" class="btn btn-form col-md-3" type="button">Resumen</button> <!-- Color boton #96c93e -->
+                    <button onclick="borrarForm()" id="btn-borrar" class="btn btn-form col-md-3 me-2" type="button">Borrar</button> <!-- Color boton #96c93e -->
+                    <button onclick="resumen()" id="btn-resumen" class="btn btn-form col-md-3" type="submit">Resumen</button> <!-- Color boton #96c93e -->
                 </div>
             </div>
 
+            <!-- Popup boton resumen -->
+            <div class="overlay" id="overlay">
+                <div class="popup" id="popup">
+                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                    <h3>Está seguro que desea borrar los datos?</h3>
+                    <form action="">
+                        <div class="contenedor-inputs">
+                            <label id="lb-nombre-y-apellido"></label>
+                            <label id="lb-correo"></label>
+                            <label id="lb-cantidad"></label>
+                            <label id="lb-categoría"></label>
+                            <label id="lb-total"></label>
+                        </div>
+                        <input type="submit" class="btn-submit" value="Aceptar">
+                    </form>
+                </div>
+            </div>
+
+            <!-- Popup boton borrar -->
+            <div class="overlay" id="overlay">
+                <div class="popup" id="popup">
+                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                    <h3>Está seguro que desea borrar los datos?</h3>
+                    <form action="">
+                        <input type="submit" class="btn-submit" value="Aceptar">
+                        <input type="cancel" class="btn-submit" value="cancelar">
+                    </form>
+                </div>
+            </div>
 
         </form> <!-- cambiar por un form-->
 
@@ -169,6 +202,9 @@
                 </ul>
             </div>    
     </footer>
+
+    <script src="./tickets.js"></script>
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
