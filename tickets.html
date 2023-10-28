@@ -104,8 +104,8 @@
             </div>
             <div class="row justify-content-md-center g-0">
                 <div class="btn-group col-md-6 text-center">
-                    <input id="nombre" type="text" class="form-control me-2" placeholder="Nombre" aria-label="First name">
-                    <input id="apellido" type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                    <input id="nombre" pattern="[A-Za-z]" type="text" class="form-control me-2" placeholder="Nombre" aria-label="First name">
+                    <input id="apellido" pattern="[A-Za-z]" type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
                 </div>
             </div>
             <div class="row justify-content-md-center g-0 mt-3">
@@ -121,9 +121,9 @@
                 <div class="col-md-3">
                     <label class="">Categoría</label>
                     <select id="seleccion" class="form-select mt-1" name="" id="">
-                        <option id="opcion1" value="1">Estudiante</option>
-                        <option id="opcion2" value="2">Trainee</option>
-                        <option id="opcion3" value="3">Junior</option>
+                        <option id="opcion1" value="0">Estudiante</option>
+                        <option id="opcion2" value="1">Trainee</option>
+                        <option id="opcion3" value="2">Junior</option>
                     </select>
                 </div>
             </div>
@@ -134,40 +134,46 @@
             </div>
             <div class="row justify-content-md-center g-0 m-0 p-0 mt-3">
                 <div class="btn-group col-md-6 t-3">
-                    <button onclick="borrarForm()" id="btn-borrar" class="btn btn-form col-md-3 me-2" type="button">Borrar</button> <!-- Color boton #96c93e -->
-                    <button onclick="resumen()" id="btn-resumen" class="btn btn-form col-md-3" type="submit">Resumen</button> <!-- Color boton #96c93e -->
+                    <button onclick="" id="btn-abrir-popup-borrar" class="btn btn-form col-md-3 me-2" type="submit" disabled>Borrar</button> <!-- Color boton #96c93e -->
+                    <button onclick="" id="btn-abrir-popup-resumen" class="btn btn-form col-md-3" type="submit">Resumen</button> <!-- Color boton #96c93e -->
                 </div>
-            </div>
-
+            </div> 
+            
             <!-- Popup boton resumen -->
             <div class="overlay" id="overlay">
                 <div class="popup" id="popup">
-                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h3>Está seguro que desea borrar los datos?</h3>
-                    <form action="">
-                        <div class="contenedor-inputs">
-                            <label id="lb-nombre-y-apellido"></label>
-                            <label id="lb-correo"></label>
-                            <label id="lb-cantidad"></label>
-                            <label id="lb-categoría"></label>
-                            <label id="lb-total"></label>
+                    <a href="" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                    <h3>Resumen Compra de Tickets:</h3>
+                    <form id="form-popup-resumen" action="">
+                        <div class="row">
+                            <div class="contenedor-labels">
+                                <label class="row ms-2" id="lb-nombre-y-apellido">1</label>
+                                <label class="row ms-2" id="lb-correo">2</label> </d>
+                                <label class="row ms-2" id="lb-cantidad">3</label>
+                                <label class="row ms-2" id="lb-categoria">4</label>
+                                <label class="row ms-2" id="lb-total">5</label>
+                            </div>
                         </div>
-                        <input type="submit" class="btn-submit" value="Aceptar">
+                        <div class="row justify-content-center">
+                            <button onclick="" id="btn-aceptar-popup-resumen" class="col-md-3 btn-submit my-3" type="submit">Aceptar</button>
+                        </div>
                     </form>
                 </div>
             </div>
 
             <!-- Popup boton borrar -->
-            <div class="overlay" id="overlay">
-                <div class="popup" id="popup">
-                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h3>Está seguro que desea borrar los datos?</h3>
+            <div class="overlay" id="overlay-borrar">
+                <div class="popup" id="popup-borrar">
+                    <a href="" id="btn-cerrar-popup-borrar" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                    <h3>Se borrarán los datos ingresados en el formulario</h3>
                     <form action="">
-                        <input type="submit" class="btn-submit" value="Aceptar">
-                        <input type="cancel" class="btn-submit" value="cancelar">
+                        <div class="row justify-content-center">
+                            <button onclick="" id="btn-aceptar-popup-borrar" type="button" class="col-md-3 btn-submit my-3">Aceptar</button>
+                        </div>
                     </form>
                 </div>
             </div>
+
 
         </form> <!-- cambiar por un form-->
 
