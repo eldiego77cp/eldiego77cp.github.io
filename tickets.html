@@ -103,20 +103,26 @@
                 </div>
             </div>
             <div class="row justify-content-md-center g-0">
-                <div class="btn-group col-md-6 text-center">
-                    <input id="nombre" pattern="[A-Za-z]" type="text" class="form-control me-2" placeholder="Nombre" aria-label="First name">
-                    <input id="apellido" pattern="[A-Za-z]" type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                <div class="col-md-3 pe-2">
+                    <input oninput="validarNombre(this)" id="nombre" type="text" class="form-control me-2" placeholder="Nombre" aria-label="First name">
+                    <div id="msg-nombre" class="msg-nombre">Solo se permite ingresar letras mayúsculas y minúsculas.</div>
+                </div>
+                <div class="col-md-3">
+                    <input oninput="validarApellido(this)" id="apellido" type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                    <div id="msg-apellido" class="msg-apellido">Solo se permite ingresar letras mayúsculas y minúsculas.</div>
+                </div>
+            </div>
+            <div class="row justify-content-md-center g-0 mt-4">
+                <div class="col-md-6">
+                    <input oninput="validarCorreo(this)" id="correo" type="text" class="form-control" placeholder="Correo" aria-label="Mail">
+                    <div id="msg-correo" class="msg-correo">Solo se permite ingresar letras mayúsculas y minúsculas.</div>
                 </div>
             </div>
             <div class="row justify-content-md-center g-0 mt-3">
-                <div class="col-md-6 text-center">
-                    <input id="correo" type="text" class="form-control" placeholder="Correo" aria-label="Mail">
-                </div>
-            </div>
-            <div class="row justify-content-md-center g-0 mt-1">
                 <div class="col-md-3 pe-2">
                     <label class="">Cantidad</label>
-                    <input id="cantidad" type="text" class="form-control me-2 mt-1" placeholder="cantidad" aria-label="cantidad">
+                    <input oninput="validarCantidad(this)" id="cantidad" type="text" class="form-control me-2 mt-1" placeholder="cantidad" aria-label="cantidad">
+                    <div id="msg-cantidad" class="msg-cantidad">Solo se permite comprar, máximo, 9 tickets por persona. Solo se admiten datos numéricos.</div>
                 </div>
                 <div class="col-md-3">
                     <label class="">Categoría</label>

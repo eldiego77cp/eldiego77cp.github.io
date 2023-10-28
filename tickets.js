@@ -189,3 +189,70 @@ btnAceptarPopupBorrar.addEventListener('click', function(event){
 
 });
 
+// Validación de Inputs
+
+function validarNombre(nombre) {
+
+    const pattern = /^[A-Za-z ]*$/;
+    const nombreIngresado = nombre.value;
+    const mensaje = document.getElementById('msg-nombre');
+  
+    if (pattern.test(nombreIngresado)) {
+      nombre.classList.remove('error');
+      mensaje.style.display = 'none';
+    } else {
+      nombre.classList.add('error');
+      mensaje.style.display = 'block';
+    }
+
+
+}
+
+function validarApellido(apellido) {
+
+    const pattern = /^[A-Za-z ]*$/;
+    const apellidoIngresado = apellido.value;
+    const mensaje = document.getElementById('msg-apellido');
+  
+    if (pattern.test(apellidoIngresado)) {
+      apellido.classList.remove('error');
+      mensaje.style.display = 'none';
+    } else {
+      apellido.classList.add('error');
+      mensaje.style.display = 'block';
+    }
+}
+
+function validarCantidad(cantidad) {
+
+    const pattern = /^$|^[1-9]$/;
+    const cantidadIngresada = cantidad.value;
+    const mensaje = document.getElementById('msg-cantidad');
+  
+    if (pattern.test(cantidadIngresada)) {
+      cantidad.classList.remove('error');
+      mensaje.style.display = 'none';
+    } else {
+      cantidad.classList.add('error');
+      mensaje.style.display = 'block';
+    }
+
+}
+
+function validarCorreo(correo) {
+    const pattern = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+    const correoIngresado = correo.value;
+    const mensaje = document.getElementById('msg-correo');
+  
+    if (pattern.test(correoIngresado)) {
+      correo.classList.remove('error');
+      mensaje.style.display = 'none';
+    } else {
+      correo.classList.add('error');
+      mensaje.style.display = 'block';
+    }
+
+
+}
+
+//^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$
