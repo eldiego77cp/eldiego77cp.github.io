@@ -102,7 +102,7 @@
             </div>
             
             <div class="row justify-content-md-center"></div>
-                <div class="d-grid gap-2 col-md-6 mx-auto">
+                <div class="d-grid gap-2 col-md-3 mx-auto">
                     <button class="btn btn-success btn-form fs-5" type="button" id="btnGetUsers">Listar Oradores</button> <!-- Color boton #96c93e -->
                 </div>
             </div>
@@ -155,20 +155,42 @@
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Editando Datos Orador</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <input id="nombreActualizar">
+                <!-- <input id="nombreActualizar">
                 <input id="apellidoActualizar">
-                <input id="mailActualizar"> 
-                <input id="temaActualizar">
+                <input id="mailActualizar" disabled> 
+                <input id="temaActualizar"> -->
+
+                <div class="row justify-content-md-center">
+                    <div class="col-md-6 text-center">
+                        <label class="row ms-2" id="lb-nombre">Nombre</label>
+                        <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" id="nombreActualizar">
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <label class="row ms-2" id="lb-apellido">Apellido</label>
+                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name" id="apellidoActualizar">
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-6 mt-3">
+                        <label class="row ms-2" id="lb-email">Correo Electrónico</label>
+                        <input type="text" class="form-control" placeholder="Email" aria-label="Email" id="mailActualizar" disabled>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <label class="row ms-2" id="lb-tema">Tema</label>
+                        <input class="form-control" placeholder="Tema" id="temaActualizar"></input>
+                    </div>
+                </div>
+
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btnCerrarModal">
                 Cancelar
             </button>
-            <button type="button" class="btn btn-primary" onclick="actualizarOrador()">
+            <button type="button" class="btn btn-primary btn-form" onclick="actualizarOrador()">
                 Actualizar
             </button>
             </div>
@@ -176,31 +198,6 @@
         </div>
     </div>
 
-    <!-- nuevo-->
-    <script>
-        crearOperador = () => {
-            const orador = {
-                 nombre:  document.getElementById("nombre").value,
-                 apellido: document.getElementById("apellido").value,
-                 email: document.getElementById("email").value,
-                 tema: document.getElementById("tema").value
-            };
-
-            //debo enviar estos datos al sevidor: https://www.freecodecamp.org/espanol/news/tutorial-de-fetch-api-en-javascript-con-ejemplos-de-js-fetch-post-y-header/
-            fetch(`http://localhost:8080/web-app-23544/api/orador`, {
-                method: "POST",
-                body: JSON.stringify(orador),
-            })
-            .then(response => response.json()) 
-            .then(json => {
-                alert(`alta de orador id:${json.id}] ok`);
-            })
-            .catch(err => console.log(err));
-        }
-
-        document.getElementById("btnCrear").addEventListener('click',crearOperador);
-    </script>
-    
     <!--listado-->
     <script>
         
@@ -232,10 +229,10 @@
                     <td>${orador.mail}</td>
                     <td>${orador.tema}</td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="editar(${orador.id})">
+                        <button type="button" class="btn btn-primary btn-form" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="editar(${orador.id})">
                             Editar
                         </button>
-                        <button onclick="eliminarOrador(${orador.id}) type="button" class="btn btn-danger">
+                        <button onclick="eliminarOrador(${orador.id})" type="button" class="btn btn-danger">
                             Eliminar
                         </button>
                     </td>
@@ -259,7 +256,7 @@
     <!--eliminar-->
     <script>
         eliminarOrador = (id) => {
-            if(!confirm('SEGURO?')) {
+            if(!confirm('Está seguro que desea eliminar el registro?')) {
                 return;
             }
 
@@ -268,11 +265,12 @@
             })
             .then(response => response) 
             .then(json => {
-                alert(`se ha eliminado el orador id: ${id}`);
+                alert(`Se ha eliminado el orador bajo el registro con id: ${id}`);
                 listarOradores();
             })
             .catch(err => console.log(err));
         }
+
     </script>
 
     <!--actualizar-->
@@ -340,7 +338,7 @@
             })
             .then(response => response) //status code 200
             .then(json => {
-                alert(`Se ha modificado el orador id:${oradorSeleccionado.id}`);
+                alert(`Se ha modificado el registro id: ${oradorSeleccionado.id}`);
                 //cargar la lista 
                 listarOradores();
                 removeOradorSeleccionado();

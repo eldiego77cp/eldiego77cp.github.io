@@ -240,12 +240,19 @@
             })
             .then(response => response.json()) 
             .then(json => {
-                alert(`alta de orador id:${json.id}] ok`);
+                alert(`El orador ha sido dado de alta satisfactoriamente bajo el id: ${json.id}`);
             })
             .catch(err => console.log(err));
+            
+            document.getElementById("nombre").value = "";
+            document.getElementById("apellido").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("tema").value = "";
+            
         }
 
         document.getElementById("btnCrear").addEventListener('click',crearOperador);
+        
     </script>
 
 </body>
